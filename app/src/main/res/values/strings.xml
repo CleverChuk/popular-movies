@@ -1,0 +1,48 @@
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2018 Chukwubuikem Ume-Ugwa
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="popular_movies_endpoint">http://api.themoviedb.org/3/movie/popular?api_key=</string>
+    <string name="top_rated_movies_endpoint">http://api.themoviedb.org/3/movie/top_rated?api_key=</string>
+    <string name="movie_endpoint">http://api.themoviedb.org/3/movie/</string>
+    <string name="poster_endpoint"> http://image.tmdb.org/t/p/w342/</string>
+    <string name="reg_pattern">^/</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="sort_by">Sort by</string>
+    <string name="popular">Popularity</string>
+    <string name="top_rated">Top rated</string>
+    <string name="plot_synop">plot synopsis</string>
+    <string name="release_date">Release date</string>
+    <string name="vote">Average vote</string>
+    <string name="title">Title</string>
+    <string name="reviews">reviews</string>
+    <string name="trailer">videos</string>
+    <string name="movie_thumbnail">Movie Thumbnail</string>
+    <string name="play_movie">play movie</string>
+    <string name="favorites">favorites</string>
+    <string name="no_fav_msg">You do not have any favorites yet.</string>
+    <string name="rep_err_msg">Unable to load: </string>
+</resources>
