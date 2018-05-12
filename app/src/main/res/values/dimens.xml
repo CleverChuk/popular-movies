@@ -29,9 +29,9 @@
     <!--grid view dimensions-->
 
     <!--image view dimension-->
-    <dimen name="image_width">100dp</dimen>
-    <dimen name="image_height">100dp</dimen>
-    <dimen name="big_image_height">200dp</dimen>
+    <dimen name="image_width_small">100dp</dimen>
+    <dimen name="image_height_small">100dp</dimen>
+    <dimen name="image_height_big">200dp</dimen>
 
     <!-- margins -->
     <dimen name="top_margin">8dp</dimen>

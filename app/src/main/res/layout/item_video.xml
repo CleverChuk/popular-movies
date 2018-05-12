@@ -51,7 +51,7 @@
 
             <ImageView
                 android:id="@+id/thumbnail_iv"
-                android:layout_width="@dimen/image_width"
+                android:layout_width="@dimen/image_width_small"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"

@@ -47,6 +47,7 @@ import com.cleverchuk.popularmovies.models.Movie;
 import com.cleverchuk.popularmovies.sqlite.FavoriteMovieContract;
 import com.cleverchuk.popularmovies.utils.ApiRequest;
 import com.cleverchuk.popularmovies.utils.Constants;
+import com.cleverchuk.popularmovies.utils.MyGridLayoutManager;
 import com.cleverchuk.popularmovies.utils.Query;
 import com.cleverchuk.popularmovies.utils.Queue;
 
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         mRecyclerView = findViewById(R.id.movieGrid);
         mRecyclerView.setAdapter(mAdapter);
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
+        GridLayoutManager layoutManager = new MyGridLayoutManager(this, 400);
         mRecyclerView.setLayoutManager(layoutManager);
 
         if (savedInstanceState == null) {
