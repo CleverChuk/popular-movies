@@ -1,2 +1,2 @@
 # popular-movies
-Project 3&amp;4, Udacity AND
+Project 2&amp;3, Udacity AND
