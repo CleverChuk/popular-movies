@@ -46,6 +46,7 @@
 
             <ImageView
                 android:id="@+id/backdrop"
+                android:transitionName="@string/movie_poster"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_height_big"
                 android:adjustViewBounds="true"

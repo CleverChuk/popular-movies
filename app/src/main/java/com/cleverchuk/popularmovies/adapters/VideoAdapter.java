@@ -85,7 +85,7 @@ public class VideoAdapter extends PopMovieBaseAdapter<VideoAdapter.VideoHolder, 
         @Override
         public void onClick(View v) {
             int pos = getAdapterPosition();
-            mListener.itemClicked(pos);
+            mListener.itemClicked(pos,v);
         }
     }
 }

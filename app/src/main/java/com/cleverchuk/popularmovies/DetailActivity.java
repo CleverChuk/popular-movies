@@ -34,6 +34,7 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -93,6 +94,11 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        {
+            getWindow().setAllowEnterTransitionOverlap(true);
+        }
         mQueue = Queue.getInstance(this);
 
         Movie movie = getIntent().getParcelableExtra(Constants.MOVIE_DATA_SHARE);
@@ -221,7 +227,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
      * @param position item position
      */
     @Override
-    public void itemClicked(int position) {
+    public void itemClicked(int position, View view) {
         Video video = mVideoAdapter.getItem(position);
         String url = YOUTUBE + video.getKey();
         Uri uri = Uri.parse(url);

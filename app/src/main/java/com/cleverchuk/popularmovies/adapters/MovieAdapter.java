@@ -90,7 +90,7 @@ public class MovieAdapter extends PopMovieBaseAdapter<MovieAdapter.MovieHolder,M
         @Override
         public void onClick(View v) {
             int i = getAdapterPosition();
-            mListener.itemClicked(i);
+            mListener.itemClicked(i,v);
         }
     }
 

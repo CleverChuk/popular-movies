@@ -31,12 +31,16 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.ChangeImageTransform;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.Response;
@@ -102,6 +106,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if (savedInstanceState == null) {
             requestPopularMovies();
         }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            getWindow().setSharedElementExitTransition(new ChangeImageTransform());
     }
 
     @Override
@@ -164,7 +170,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 requestTopRatedMovies();
                 return true;
             case R.id.favorites:
-                    getLoaderManager().restartLoader(LOADER_ID, null, this);
+                getLoaderManager().restartLoader(LOADER_ID, null, this);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -191,11 +197,18 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * @param position item position
      */
     @Override
-    public void itemClicked(int position) {
+    public void itemClicked(int position, View view) {
         Movie movie = mAdapter.getItem(position);
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
         intent.putExtra(Constants.MOVIE_DATA_SHARE, movie);
-        startActivity(intent);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    this, view, getString(R.string.movie_poster));
+            startActivity(intent, optionsCompat.toBundle());
+        } else {
+            startActivity(intent);
+        }
     }
 
     @Override

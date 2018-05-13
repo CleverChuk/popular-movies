@@ -46,7 +46,7 @@ abstract public class PopMovieBaseAdapter<VH extends RecyclerView.ViewHolder, D 
      * interface to communicate with the activity
      */
     public interface OnMovieItemClickListener {
-        void itemClicked(int position);
+        void itemClicked(int position, View view);
     }
 
     PopMovieBaseAdapter(String key) {
